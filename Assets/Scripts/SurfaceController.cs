@@ -151,4 +151,11 @@ public class SurfaceController : MonoBehaviour
         if (_heightMap != null)
             _heightMap.Reset();
     }
+    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Vector3 drawPos = new Vector3(Zone.Position.x, 0, Zone.Position.y);
+        Gizmos.DrawSphere(drawPos, 0.05f);
+    }
 }
